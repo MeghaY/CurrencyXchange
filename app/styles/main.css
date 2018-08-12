@@ -1,0 +1,108 @@
+html, body {
+  margin: 5px;
+}
+body {
+  background: #ffffff;
+  font-family: "calibri", Helvetica, Arial, sans-serif;
+  color: #333;
+  padding-top: 2px;
+}
+/*header*/
+.headerBackground{
+  height: 150px;
+  background: -webkit-linear-gradient(left top ,royalblue,#716b7a); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, royalblue ,#716b7a); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, royalblue ,#716b7a); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right ,lightblue, cornflowerblue); /* Standard syntax */
+
+}
+.headerTitle{
+  font-family: "Times New Roman",Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 2px 2px #f5f5f5;
+  color: white;
+}
+label{
+  font-family: "calibri", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+/*table*/
+table,th,td
+{
+    border:1px solid lightgrey;
+    border-collapse:collapse;
+}
+th,td
+{
+    padding:5px;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}
+/*navigation*/
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+.navbar-default .navbar-brand{
+    color: white;
+}
+.navbar-custom{
+    background-color: cornflowerblue;
+    opacity: 0.8;
+    color: white;
+}
+
+/*Panel*/
+.panel{
+  border-color: rgb(148, 170, 236);
+  opacity: 0.9;
+
+}
+.panel-heading{
+  background-color: rgb(148, 170, 236);
+  border-color: rgb(148, 170, 236);
+  color: white;
+}
+/*custom buttons*/
+.custom-button-style{
+    border-radius: 4px;
+    font-family:"calibri", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #000000;
+    font-weight: 600;
+    width:60px;
+    height:30px;
+}
+.custom-btn-news{
+    border-radius: 4px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: cornflowerblue;
+    opacity: 0.8;
+}
+
+.custom-label{
+    border-radius: 4px;
+    color: white;
+    background-color: cornflowerblue;
+    opacity: 0.8;
+    padding: 2px;
+}
+
+.bid-button{
+    background-color: lightblue;
+    opacity: 0.6;
+    border-color: lightblue;
+}
+.ask-button {
+    background-color: cornflowerblue;
+    opacity: 0.6;
+    border-color: cornflowerblue;
+}
+
+.required label:after {
+  content: ' *';
+  display:inline;
+}
