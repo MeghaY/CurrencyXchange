@@ -1,0 +1,26 @@
+<!--injecting the header and menu using main.html template-->
+<div ng-include src="'views/main.html'"></div>
+
+<!--View for the news feed data showing the published date and title. Clicking the title link will open a modal for viewing the content-->
+<div class="row">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Title</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="entry in entries">
+                    <!--using a factory method to generate a modalInstance for display -->
+                    <td>{{entry.pubDate}}</td>
+                    <td><button class="btn btn-sm custom-btn-news" ng-click="service.openNewsDetailsModal(entry)">{{entry.title}}</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
