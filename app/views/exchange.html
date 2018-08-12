@@ -1,0 +1,83 @@
+<!--injecting the header and menu using main.html template-->
+<div ng-include src="'views/main.html'"></div>
+
+<div class="row">
+    <div class="col-md-12">
+        <!--Currency Exchange Section-->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Currency Exchange</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group required">
+                            <label>Amount</label>
+                                <input type="number" name="amt" class="form-control" ng-model="model.amount" required/>
+                                <p ng-show="show === true">Amount is required and should be greater than 0</p>
+                        </div>
+                    </div>
+                </div>
+                <!--</form>-->
+                <div class="row form-group" ng-repeat="items in currencyCodes">
+                    <div ng-repeat="item in items" class="col-md-4">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">{{item}}</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-4 col-md-offset-1">
+                                        <div class="form-group">
+                                            <label>{{randomBidNum}}</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="custom-button-style bid-button" ng-click="bid(item, randomBidNum)">Bid</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-md-offset-1">
+                                        <div class="form-group">
+                                            <label>{{randomAskNum}}</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="custom-button-style ask-button" ng-click="ask(item, randomAskNum)">Ask</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Transaction History Display section which will show up only when user clicks bid or ask buttons-->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Transaction History</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-responsive">
+                    <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>Currencies</th>
+                        <th>Amount</th>
+                        <th>Price</th>
+                        <th>Date-Time</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="data in Data track by $index">
+                        <td ng-style="setBkColor(data.order)">{{data.order}}</td>
+                        <td ng-style="setBkColor(data.order)">{{data.currency}}</td>
+                        <td ng-style="setBkColor(data.order)">{{data.amount}}</td>
+                        <td ng-style="setBkColor(data.order)">{{data.price}}</td>
+                        <td ng-style="setBkColor(data.order)">{{data.date_time}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
